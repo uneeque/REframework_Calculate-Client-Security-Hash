@@ -1,0 +1,87 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SHA1_Close" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1488,827" sap2010:WorkflowViewState.IdRef="SHA1_Close_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SHA1_Close" sap:VirtualizedContainerService.HintSize="476,392" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: SHA1 - шифрование online" sap:VirtualizedContainerService.HintSize="434,300" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="dc5d78c8-446a-4bed-a0d8-5edd0a6f1c60" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="208,84" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAO2SURBVDhPPZN9SFtnGMWvNWms29oxNgqTUQZjo38MZG607I+06mpTjbZMKNtgm2mLrK5YimLHbIfMjUyT2TmK4BBBbW3NtC62WLua2kbrtyEfSzQxN8mNN7m5+TaJ19ipZ2/d2AM/eP86nOc556Xa2tpyKioUVTJZieJ4UclpmUxeVl+vPHbliurDy5eVubW1P75dXd34xtmzX7+ak5Pzcnb2C/uysrL3SiR7XqSej1r987EAHwS2gGcCEA8JYBgOLpd/02KhN6xWt+ByhpOLNjb+9KklOj29FJqacvAdHVpaLJYcopqbW47Hwkk418xopS+h334TG+uAIGwhFEoi4E/AH46C51NgPFEEAgJi0W2MjMxvE4FTVGOjqjjOC2i21uLdUQr5/e9jxRvEWmoLUX4DuqWHqHUU4vNHchgtLgT9KYT4NO4Pz6RFIkkZJZOVnfR7IxhbHkOF7kv8cFcJ2s6C42JgXTEMLgzixOODkPZ+gCf6edT3+/BpG43unj/TWZKsMqqgQFYeJFbxDFiNkhsE1xCLpJEIAzybgtcdhZn2wGRywGxyQ/q9Ga+f00Op7k3veS5QWFh8ei2Rxj1DHG99a8Oldgt8QRY3GBV+M7SCdgaRjGzC5UnAuczB4YhgZo5BX99oWizecVD8WZiL4NogjdcUEyiteYA/ZjUomtqPvFsHMKGfgeYJj4Pf2fBT1zy8Tg5eJoGBgfF1coNSKj+/+AufL4FoRCDRBWEyOsjl47hh7EH7SAc8iwyu9jhBnRyD4uoInJYVBHyb6B/QCyLR7hLq6FG5wu9fI5EJiITT8LFR2JwxfHM7DlWvCy5nAG5i//dhGr+MNaHBUAmdbR7aO7P/C1QyzCpYdhUcu46QW8DQuB+7z83hzYq7mJwwg/UmdzpQY/oYuY9EqNRW457GIIhFkhLqyBF5ld0egtsZwaRtFtenmjBncaB7iEZn3yRmpm1YXOTxl4VD7/gQlA9bMaKfxa2bj4kDIiCVll7wMgJ8KwKU1vMoWngJVQ/OI072pJdDsFr9oOk4lpbCMBs4MPY0GPc6NJrxf1eQSstq/L6/Sbu20W5twyldIVSj1xHybcPjSWJ5OYaVlQ0ikoLRyBGhBHmnSYzT2Gni4cOyC1rtTKrvti7S3XWfa2npYq+puhi1upNuaPjVVlfXtHDxYuPEmTN1uvLyr4blcoU2P/+Tgby8E527dmW+R2VmivcRKx9lZGQWUFTGIUIu+aTvEA4Q9hNeIewlZBPEhAzCf0NR/wBiqKWWj4LuLQAAAABJRU5ErkJggg==" InformativeScreenshot="7fbcbb7145f781f074178f71171e0b44.png" Selector="&lt;html app='chrome.exe' title='SHA1 - шифрование online' /&gt;" Url="https://crypt-online.ru/crypts/sha1/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
