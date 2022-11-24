@@ -1,0 +1,140 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SHA1_ProccessHash" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_HashFormula" Type="InArgument(x:String)" />
+    <x:Property Name="out_HashResult" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1794,1199</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SHA1_ProccessHash_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SHA1_ProccessHash" sap:VirtualizedContainerService.HintSize="476,1134" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: SHA1 - шифрование online" sap:VirtualizedContainerService.HintSize="434,1042" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="cf40a9bc-62d2-4217-8c00-b3c30e18a05e" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="376,826" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Текст'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="cf40a9bc-62d2-4217-8c00-b3c30e18a05e" Text="[in_HashFormula]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://crypt-online.ru/crypts/sha1/" DesignTimeRectangle="650, 296, 620, 111" ElementType="InputBox" FriendlyName="'TEXTAREA text'" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' type='' class='form-textarea' aaname='' /&gt;" Guid="62cd19de-4bd5-4c4b-8512-cbd41956a8a2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAnAAAABzCAYAAAAYGD8kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALQSURBVHhe7drNiRtBGEVRR6voFEAnoM5AgTRo3+YznkEa+Wdn14Vz4FGL7gAuRX17PB6nmZmZmXUm4MzMzMxiewm4+/1+btt2Xq9XMzMzM1tg02bTaM/N9hlw8+F2u53HcZwAAKxh2mzf95eI+wy4qTvxBgCwnmm0abW3gJsrOgAA1jStJuAAAEIEHABAjIADAIgRcAAAMQIOACBGwAEAxAg4AIAYAQcAECPgAABiBBwAQIyAAwCIEXAAADECDgAgRsABAMQIOACAGAEHABAj4AAAYgQcAECMgAMAiBFwAAAxAg4AIEbAAQDECDgAgBgBBwAQI+AAAGIEHABAjIADAIgRcAAAMQIOACBGwAEAxAg4AIAYAQcAECPgAABiBBwAQIyAAwCIEXAAADECDgAgRsABAMQIOACAGAEHABAj4AAAYgQcAECMgAMAiBFwAAAxAg4AIEbAAQDECDgAgBgBBwAQI+AAAGIEHABAjIADAIgRcAAAMQIOACBGwAEAxAg4AIAYAQcAECPgAABiBBwAQIyAAwCIEXAAADECDgAgRsABAMQIOACAGAEHABAj4AAAYgQcAECMgAMAiBFwAAAxAg4AIEbAAQDECDgAgBgBBwAQI+AAAGIEHABAjIADAIgRcAAAMQIOACBGwAEAxAg4AIAYAQcAECPgAABiBBwAQIyAAwCIEXAAADECDgAgRsABAMQIOACAGAEHABAj4AAAYgQcAECMgAMAiBFwAAAxAg4AIEbAAQDECDgAgBgBBwAQI+AAAGIEHABAxOVy+XEKOACAgI94GwIOAGBxz/E2BBwAwMK+xtsQcAAAi/oab97AAQAs7HfxNgQcAMBi/hRv45cBt23beRzHz18AAPhX/hZv02jTam8Bd7/fz33fRRwAwEKmzabRptXeAu4j4qbu5orOzMzMzP7/ps2e4232EnBmZmZmtv4EnJmZmVlqj/M7/lgJgvewfXwAAAAASUVORK5CYII=" InformativeScreenshot="cbd3376d34e1773741bccbe6763427ec.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SHA1 - шифрование online' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="650, 279, 43, 15" ElementType="Text" FriendlyName="'Текст'" FullSelectorArgument="&lt;webctrl tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='STRONG' type='' class='' aaname='Текст:' check:innerText='Текст:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC8AAAATCAYAAAAAn1R6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVEhL7ZTLDcMgDEA7K1OwhUdhC0sdgi24u6R8zMdJUymqG4nDO2Bj9DAWjxAC3ZUlr8WS1yLJI5AxZhfrvFiszdR572ySto78kPs3vpRHguZFjLHkfM55R3aIIaR9/HJj/ZZ7krN9jHOxrkyF4HNevsoB4eE6yzej+JYQLrft4Yv5eoluTK+Qr3HAHOMuAsZ1J1dEWHSuH9mRP+C0fBkBiV6+oRGt9RryHzvXdX54lZhX7bw4sxGEvB7y0zlS/a9mPjH/FlVmkmMZ7rb021wofyeWvBZLXodAL3//gykbZfyUAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Кодировать'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cf40a9bc-62d2-4217-8c00-b3c30e18a05e" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://crypt-online.ru/crypts/sha1/" DesignTimeRectangle="650, 419, 86, 21" ElementType="Button" FriendlyName="'Кодировать'" FullSelectorArgument="&lt;webctrl parentid='edit-actions1' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='edit-actions1' tag='INPUT' type='button' class='form-submit' aaname='Кодировать' check:text='Кодировать' /&gt;" Guid="3494a8bc-1a89-449b-b37c-5641e2bb910a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFoAAAAZCAYAAACxZDnAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQYSURBVGhD7ZnNbtpAEMf7hH4QHxChfgIfc4hIFC5+gR6oiISI3AtumqYHUsTXKTmkEsqHOMCFIOVApOn8Z7322rgQTBMlklf6S/Huzuzub2dnjfNpsVhQoddXAfqNlAA9m81oNBrR9yCgb75fKIfAbjQcCkuTbQQaDT/Ozujn+Tn9vrykfq9XKIfADgzB0oQdgcYuoEOWcaHtBZbDwWAVNEK+iOT/J7AE0xXQyC9ZBoXyC0y3Ah14NlluI64LPLItiyzLpYbRr1BS+UBX+0RPU35ukMuQ3facngnliWYZNoV2Bd1wybLrNAbiaXb/Qko7gL6QaLbrjHk5pzujT8NFKgllphmW2Os2yPYokLaAPJtPR0P3Vc/aXny6nqoT23SqUqdL+439pOYjMm3DcdJtCKKEjRL8wp/tBZH/lygf6GjQKScLouf5bbKd4V2jgUZU435O8ypqxyT3O0s0cnONLMeniWyUWvChHBbuqxd6PJLTo2HVunN6ZPNRjZ+dJl2LX2Vre1cyH/FrOdS8iscsNycyJIrY1rqS5mS+blt8Ek3Id3i+/lilwCm8YQ0O+bE5dQ+UP3Pdm5QPNCJ64pPDC6/UzZ1VCy6d3EdRHnhlgfkQTgqLPugaMMvNDNCITpe8eoWBGKArvCm8ULHlS7gMAPdsKxdyiTCsWjz7KgPYPT3exqA1mAi83DM9upszZePOqbRMiKgrU3OyFF+m/duAxsTaVYmc0xtzUgqWnoT032sZMG36ytlmHehx3ZboHPsMOhxLQB8x9HAD1Vh7dAoAbUR/lQakYShfGpjY4nREcukXB6vMMZEieFzYcfhuAp32t+mNazfQYeRYtX5ygTxRfTkmQWPS+9RZhpPOAt3yqVL2aMhR9nBSSoJGRMu4bCtRHAIY4O8KH2/91rMK2kwdKmUh7ah+cs9ICVPHCyNaFzMVKZtV7Qia6xr7vKN8hMfqOfAYzmedKlSE61QyhK17wXk0BJIBGhFy1OHXRd3fBK1TBdvKc+mEHiSK2bYUpwoVpXEq0WAieNG4N/QFY/I9IG1hdG+bOoQJTptmkqHdQbMafDlYTov+hBMJqgqYSMCSik5dl9ZxJwaNy48LToQ5loA9qsnlquzU8Y9TSZsODZ/uhTQKHLVJSUk7bCVQwnp+w5G18L2wCbTpC3MJojyv+qS1NWgovjziulli0eGzLtw3gpYqE9+JLrx+71bd/oZvPZYCjX44D7qkfyCptyBddPqCEvMJS9Qubxdh4bGkrzEH5TcGne1v/Y+1XKDzKOskrKtPKwa9vt97VSbo1/p6l3US1tWb+sig//n17r1+j1490h9D8j2ama6Axn8DsAPoUHyXzi+wA0OwzPwPi4aNyEYn5JdC2wvsEMkmZCgButDrqQD9JlrQX5mizWCc4n6HAAAAAElFTkSuQmCC" InformativeScreenshot="cde5a7a6f6052fbfa5c6437da1e5e62d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SHA1 - шифрование online' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get Text 'Результат (40)'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="cf40a9bc-62d2-4217-8c00-b3c30e18a05e" Version="V1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://crypt-online.ru/crypts/sha1/" DesignTimeRectangle="650, 470, 306, 19" ElementType="InputBox" FriendlyName="'3b08c7d734d5bbf36d09a67…'" FullSelectorArgument="&lt;webctrl id='result' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='result' tag='INPUT' type='text' class='form-text' aaname='' /&gt;" Guid="6a4b79c6-2f77-4836-b660-f5147f6b9642" InformativeScreenshot="b3b3a67091f052bc82c181374d6a66a5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SHA1 - шифрование online' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="650, 453, 108, 15" FriendlyName="'Результат (40)'" FullSelectorArgument="&lt;webctrl parentid='label-result' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='label-result' tag='B' type='' class='' aaname='Результат (*):' check:innerText='Результат (40):' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHAAAAATCAYAAABIgIm/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJrSURBVGhD7ZYxjuJQEET3rKSEZMSEZKTcgCsQEnAAjkBGSu5VIb1RbdH+eMwIyTsOSsj9u6uru74t/tzv927GdDEbOHHMBk4cs4ETx2zgCBwOh26xWHSbzaa73W5lznchHvGJV/xVToUvA0+n06M4sdvtnop+My6XS7dcLrvVatVdr9enczcic7TL3K/2zrlyVSN+9SHewpOB3KqxN+J/Byb44h28nYIbmPvtuwjkDX1xeg1UrPpUuEBvxO3xM8RVPK0L4+C8dfPhSij3fD4/6jIujkozEKf3EMivNAhoXK/XDw7Pw3heBu/tvaoerdkHGYhJKSKfHZzpF1ESwachazEQkamnNQSgZkiOz4k+xX2ZCWqlPc/QLxyPx390cKZYzlv1ZDfERxmYDRjSTcBgauDyM4Z1UXC7IPiJpR6GUMzhl4eaHLSqdc30Vlwc1CXg955AMXaTOnyX1FYx53qlBbz8EwNJ3wIFluGiBBcGv4yEy28yS4SLfJ6pYSk8szTv4QZmjDp4vbfymLcCXLlwOIlnT98LOR7Lnm8Z6IM5GNIX1gIi4EOwOPb7/RNPLjb1cM5SqqVTQ45ivPlcluyjWMVVAX6/eAKzVmBOdGBgqye5LS1gsIFCLkOQOBnieUIa6LGqD2cMmHrSwHz2Go/Bi+ZK11ADyXP+CpWOV/NQW/XoyxW+ZaDgJgAth3pHNkSIznxRuWShb2C4gfNQ431VKw7yt9vtg2eMgQKXuJVX6RCodSQPtb6LQQZ+An2DTQmtZb4LLpL41afKSXzMQH8T+ExOFdVn+F2M3c9H38AZP4/ZwIljNnDSuHd/AfgSfsUAXd7rAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[out_HashResult]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[out_HashResult]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="8091dc4e94f8ced4d0e12de1eedf66ea.png" Selector="&lt;html app='chrome.exe' title='SHA1 - шифрование online' /&gt;" Url="https://crypt-online.ru/crypts/sha1/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
